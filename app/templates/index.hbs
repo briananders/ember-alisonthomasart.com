@@ -1,0 +1,61 @@
+<row>
+  {{#each piece in this.model.content}}
+
+    {{#link-to "piece" piece.id title=piece.id class="image-block" data-index=_view.contentIndex}}
+      <img {{bind-attr src=piece.src380 alt=piece.id}} />
+      <div class="bar">
+        <span class="name">{{piece.id}}</span>
+      </div>
+    {{/link-to}}
+
+  {{/each}}
+</row>
+
+
+
+
+
+<section id="about">
+  <img class="profile" src="/images/profile/me.jpg" data-src-2x="/images/profile/me_2x.jpg" alt="A picture of me.">
+  <header>
+    <h2>I'm Alison</h2>
+  </header>
+
+  <p>
+    I’m a recent graduate of a small, private university in Southern Iowa. I learned many different processes and used a wide variety of materials, but ended up falling in love with paper. Patterned paper, to be precise.
+  </p>
+
+  <p>
+    I use paper because I am slightly obsessed with it, and the variety of colors and patterns that paper can come in lends itself nicely to my process. The different patterns add texture to what is technically a smooth, flat, surface. They intensify what could be a less thrilling piece if done in only solid colors. The patterns also help add depth to my otherwise two-dimensional pieces. Probably my favorite part of the process is choosing which colors and patterns to use in a piece. It can be a challenge to find just the right colors and patterns so that they do not fade into each other, but also do not compete for attention. The rest of my process, while at times quite tedious, is also fairly cathartic and satisfies the puzzle lover in me.  The strange shapes that I cut out need to be pieced together in just the right way to create a recognizable image. The problem solving and attention needed to accomplish this task is just as invigorating to me as finding the perfect papers.
+  </p>
+
+  <p>
+    So far my subject matter has had a mostly organic, natural focus: animals, plants, people, etc. and in truth, that is what inspires me most. I find nature to be a peaceful, healing presence in my life.
+  </p>
+
+  <p>
+    I currently live in the San Fancisco Bay Area and am just beginning the journey to become a professional artist. I’m excited to see what the next few years have in store as I grow as both a person, and as an artist.
+  </p>
+
+  <p>
+    If you like my technique, please contact me and we can talk about a personalized piece, or you can purchase one of the pieces that I currently have in stock.
+  </p>
+</section>
+
+
+
+
+
+<section id="contact">
+  <ul>
+    <li>
+      <a href="mailto:alison.thomas@outlook.com"><span>alison.thomas</span>@outlook.com</a>
+    </li>
+    <li>
+      <a href="http://www.facebook.com/alison.thomas.art">Facebook.com/<span>alison.thomas.art</span></a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/alisonrosethomas">LinkedIn.com/<span>AlisonRoseThomas</span></a>
+    </li>
+  </ul>
+</section>

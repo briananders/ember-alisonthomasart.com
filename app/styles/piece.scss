@@ -1,0 +1,71 @@
+@import "base";
+
+#art {
+  width: 100%;
+}
+
+.piece-view {
+  max-height: 100%;
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+    @include box-shadow(0 0 10px $black);
+    margin: auto;
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  section {
+    display: inline-block;
+    width: auto;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    #title {
+      @include font-size(30);
+    }
+    #year {
+      @include font-size(20);
+    }
+    #size {
+      @include font-size(20);
+    }
+    #media {
+      @include font-size(20);
+    }
+    #animal {
+      @include font-size(20);
+    }
+  }
+}
+
+.back {
+  text-decoration: none;
+}
+
+.chevron {
+  b {
+
+  }
+}
+
+.zoomLens {
+  background-color: $white;
+}
+
+@include mq(768px) {
+  .piece-view {
+    section {
+      border-radius: 0 5px 0 5px;
+      position: absolute;
+      bottom: 0px;
+      left: 20px;
+    }
+  }
+}

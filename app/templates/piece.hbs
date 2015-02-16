@@ -1,0 +1,17 @@
+{{#link-to 'index' class="chevron back"}}<b>&lt;</b>&nbsp;Back{{/link-to}}
+
+{{#if isRetina}}
+  <img id="art" {{bind-attr src=this.model.src2080}} />
+{{else}}
+  <img id="art" {{bind-attr src=this.model.src1040}} />
+{{/if}}
+
+<section>
+  <ul>
+    <li id="title">{{this.model.id}}</li>
+    <li id="year">{{this.model.year}}</li>
+    <li id="size">{{{this.model.size}}}</li>
+    <li id="media">{{this.model.media}}</li>
+    <li id="animal">{{this.model.animal}}</li>
+  </ul>
+</section>

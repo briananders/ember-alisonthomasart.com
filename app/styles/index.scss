@@ -1,0 +1,128 @@
+@import "base";
+
+.image-block {
+  display: block;
+  float: left;
+  position: relative;
+
+  > img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+  }
+  div.bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.7);
+    @include box-sizing(border-box);
+    padding: 10px;
+  }
+}
+
+
+
+
+
+
+////////////////////////ABOUT SECTION///////////////////////////////
+
+#about {
+
+  h2 {
+    margin: 0;
+    font-size: 5rem;
+  }
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: auto;
+  }
+}
+
+@include mq(768px) {
+  #about {
+    img {
+      float: right;
+      width: auto;
+      margin-left: 20px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+////////////////////////CONTACT SECTION///////////////////////////////
+
+#contact {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    text-align: center;
+  }
+
+  a {
+    @include font-size(18);
+    text-decoration: none;
+    font-family: "Futura";
+    color: $black;
+
+    span {
+      color: $mid;
+    }
+
+    &:hover {
+      span {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@include mq(400px) {
+  #contact {
+    a {
+      @include font-size(24);
+    }
+  }
+}
+@include mq(500px) {
+  #contact {
+    a {
+      @include font-size(30);
+    }
+  }
+}
+@include mq(600px) {
+  #contact {
+    a {
+      @include font-size(36);
+    }
+  }
+}
+@include mq(768px) {
+  #contact {
+    a {
+      @include font-size(45);
+    }
+  }
+}
+
+@include mq(768px) {
+  .image-block > img {
+    border-width: 1em;
+  }
+}

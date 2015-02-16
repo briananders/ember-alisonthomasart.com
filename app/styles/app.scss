@@ -1,0 +1,91 @@
+@import "base";
+@import "normalize";
+@import "index";
+@import "piece";
+
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  color: $black;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background: url('/images/paisley.jpg');
+  background-size: 150px;
+}
+
+header#main-header {
+  overflow: hidden;
+  width: 100%;
+  background: $white;
+  // @include box-shadow(0 0 10px $black);
+  @include font-size(30);
+  padding-top: 5px;
+  padding-top: .5rem;
+
+  h1 {
+    margin: 0;
+    font-weight: 100;
+  }
+  .name {
+    float: left;
+    text-decoration: none;
+    font-family: "Jenna";
+    text-align: center;
+    width: 100%;
+    color: rgb(228,117,107);
+  }
+}
+
+.content {
+  font-family: "Futura";
+  position: relative;
+  line-height: 1.5;
+  overflow: hidden;
+  max-width: 1040px;
+  margin: auto;
+  padding: 20px 20px 0;
+  @include box-sizing(border-box);
+  @include font-size(24);
+
+  p {
+    margin: 20px 0 0;
+
+    &:first-child {
+      margin: 0 0 0;
+    }
+  }
+}
+
+section {
+  width: 100%;
+  padding: 20px;
+  background: $white;
+  margin-bottom: 1em;
+  overflow: hidden;
+  border-radius: 5px;
+  @include box-sizing(border-box);
+}
+
+footer#footer {
+  text-align: center;
+  padding: 5px 0 5px;
+  display: block;
+  width: 100%;
+  font-family: "Futura";
+  background: $white;
+  color: $mid;
+  // @include box-shadow(0 0 10px $black);
+  @include font-size(16);
+  @include box-sizing(border-box);
+
+  &.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

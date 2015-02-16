@@ -1,0 +1,85 @@
+@import "compass";
+
+//colors
+$black: #55555B;
+$white: #fafafa;
+
+$darkest: #34343C;
+$dark: #888890;
+$mid: #9999A0;
+$light: #BBBBCB;
+$lightest: #D0D0EF;
+
+
+
+@font-face {
+    font-family: "Menagerie";
+    src: url(/fonts/JustRealize.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Menagerie Bold";
+    src: url(/fonts/JustRealizeBold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Futura";
+    src: url(/fonts/Futura.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Name";
+    src: url(/fonts/Namer.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Jenna";
+    src: url(/fonts/JennaSue.ttf) format("truetype");
+}
+
+$gutter:    percentage(20px/940px); // 20px at 960px wide container, accounting for a 1/2 gutter width padding on the left and right of the container
+$onecol:                6.3829787%; // 60px at 960px wide container
+$columnsBreakPoint:          600px; // set this to the minimum width you want the columns to take effect at
+$containerMaxWidth:          1040px; // set this to the maximum width you want .container to have
+
+// MEDIA QUERY MIXINS
+@mixin mq($query) {
+  @media screen and (min-width: $query) {
+    @content;
+  }
+  html.nr {
+    @content;
+  }
+}
+@mixin mq-max($query) {
+  @media screen and (max-width: $query) {
+    @content;
+  }
+}
+@mixin columns($count:1) {
+  width: ($onecol * $count) + ($gutter * ($count - 1));
+}
+@mixin font-size($sizeValue: 16) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+@mixin column-count($value:1) {
+   -webkit-column-count: $value;
+   -moz-column-count:    $value;
+   column-count:         $value;
+}
+@mixin column-gap($value:0px) {
+   -webkit-column-gap:   $value;
+   -moz-column-gap:      $value;
+   column-gap:           $value;
+}
+@mixin retina() {
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    @content;
+  }
+}
+@mixin background-image-retina($image, $image-2x:"") {
+  background-image: image-url("/images/"+$image);
+  @if ($image-2x != "") {
+    @include retina() {
+      background-image: image-url("/images/"+$image-2x);
+    }
+    background-size: image-width($image-2x)/2 image-height($image-2x)/2;
+  }
+}
